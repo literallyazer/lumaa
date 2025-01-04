@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations | Luma Time Travel</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/destinations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Luma</a>
+            <div class="nav-links">
+                <a href="../html/destinations.html" class="active">Destinations</a>
+                <a href="../html/quiz.html">Quiz</a>
+                <a href="../html/about.html">About</a>
+                <a href="../html/contact.html">Contact</a>
+            </div>
+            <a href="../html/book.html" class="book-btn">Book Journey</a>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="destinations-header">
+        <div class="header-content">
+            <h1>Explore Our Time Travel Destinations</h1>
+            <p>Journey through Time—Past, Future, and Fantasy Awaits!</p>
+        </div>
+    </header>
+
+    <!-- Timeline Filter -->
+    <section class="timeline-filter">
+        <div class="filter-container">
+            <button class="filter-btn active" data-era="all">All Eras</button>
+            <button class="filter-btn" data-era="past">Past</button>
+            <button class="filter-btn" data-era="future">Future</button>
+            <button class="filter-btn" data-era="fantasy">Fantasy</button>
+        </div>
+    </section>
+
+    <!-- Destinations Grid -->
+    <section class="destinations-grid">
+        <!-- Past Destinations -->
+        <article class="destination-card" data-era="past">
+            <div class="card-image">
+                <img src="../images/hero.png" alt="Ancient Egypt">
+            </div>
+            <div class="card-content">
+                <span class="era">2500 BC</span>
+                <h3>Ancient Egypt</h3>
+                <p>Witness the construction of the Great Pyramids and experience life along the Nile.</p>
+                <div class="card-footer">
+                    <a href="../html/destinations.html" class="learn-more">Discover More</a>
+                    <button class="book-now">Book Now</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <!-- Future Destinations -->
+        <article class="destination-card" data-era="future">
+            <div class="card-image">
+                <img src="../images/tokyo.png" alt="Neo Tokyo">
+            </div>
+            <div class="card-content">
+                <span class="era">2150 </span>
+                <h3>Neo Tokyo</h3>
+                <p>Experience the pinnacle of human achievement in this cyberpunk metropolis.</p>
+                <div class="card-footer">
+                    <a href="../html/destinations.html" class="learn-more">Discover More</a>
+                    <button class="book-now">Book Now</button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Fantasy Destinations -->
+        <article class="destination-card" data-era="past">
+            <div class="card-image">
+                <img src="../images/arabia.jpg" alt="Lost City of Atlantis">
+            </div>
+            <div class="card-content">
+                <span class="era">622 - 1258</span>
+                <h3>Islamic Golden Afe</h3>
+                <p>Dive into the legendary underwater civilization at its peak.</p>
+                <div class="card-footer">
+                    <a href="../html/destinations.html" class="learn-more">Discover More</a>
+                    <button class="book-now">Book Now</button>
+                </div>
+            </div>
+        </article>
+
+<!-- Atlantis Card -->
+<article class="destination-card" data-era="fantasy">
+    <div class="card-image">
+        <img src="../images/ATLANTIS.png" alt="Lost City of Atlantis">
+    </div>
+    <div class="card-content">
+        <span class="era">Mythical Era</span>
+        <h3>The Lost City of Atlantis</h3>
+        <p>A legendary underwater city filled with advanced technology, ancient wisdom, and mythical creatures. Explore its ruins, submerged temples, and the mystery of its disappearance.</p>
+        <div class="card-footer">
+            <a href="../html/destinations.html" class="learn-more">Discover More</a>
+            <button class="book-now">Book Now</button>
+        </div>
+    </div>
+</article>
+
+<!-- Viking Age Card -->
+<article class="destination-card" data-era="past">
+    <div class="card-image">
+        <img src="../images/viking.png" alt="Viking Age">
+    </div>
+    <div class="card-content">
+        <span class="era">800-1100 AD</span>
+        <h3>The Viking Age</h3>
+        <p>Step into the rugged world of Viking warriors, discover their longships, and explore the harsh beauty of Scandinavian landscapes. Visit Viking settlements and witness Norse mythology in action.</p>
+        <div class="card-footer">
+            <a href="../html/destinations.html" class="learn-more">Discover More</a>
+            <button class="book-now">Book Now</button>
+        </div>
+    </div>
+</article>
+
+<!-- Space Age Card -->
+<article class="destination-card" data-era="future">
+    <div class="card-image">
+        <img src="../images/space-age.png" alt="Space Age">
+    </div>
+    <div class="card-content">
+        <span class="era">2050+</span>
+        <h3>The Space Age</h3>
+        <p>Journey to a future where space travel is common. Visit futuristic space stations, colonies on Mars, and cutting-edge technological advancements. Experience life in space with zero gravity.</p>
+        <div class="card-footer">
+            <a href="#" class="learn-more">Discover More</a>
+            <button class="book-now">Book Now</button>
+        </div>
+    </div>
+</article>
+
+        <!-- Add more destination cards here -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h4>LUMA</h4>
+                <p>Luxury time travel experiences since 2150</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h5>Explore</h5>
+                    <a href="/destinations">Destinations</a>
+                    <a href="/experiences">Experiences</a>
+                    <a href="/about">About Us</a>
+                    <a href="/contact">Contact</a>
+                </div>
+                <div class="link-column">
+                    <h5>Legal</h5>
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Service</a>
+                    <a href="/temporal">Temporal Guidelines</a>
+                </div>
+                <div class="link-column">
+                    <h5>Contact</h5>
+                    <p>temporal@luma.com</p>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Luma. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="js/destinations.js"></script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+/* Destinations Header */
+.destinations-header {
+    height: 60vh;
+    background: linear-gradient(rgba(20, 21, 26, 0.6), rgba(20, 21, 26, 0.8)),
+                url('../images/time-portal.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-content {
+    max-width: 800px;
+    padding: 0 20px;
+    color: var(--bg-light);
+    opacity: 0;
+    animation: fadeInUp 1s ease 0.5s forwards;
+}
+
+.header-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--bg-light);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    color: var(--bg-light);
+    opacity: 0.9;
+}
+
+/* Timeline Filter */
+.timeline-filter {
+    padding: 2rem 0;
+    background: var(--bg-light);
+    position: sticky;
+    top: 80px;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.filter-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 500;
+}
+
+.filter-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+.filter-btn:hover::after,
+.filter-btn.active::after {
+    width: 100%;
+}
+
+.filter-btn.active {
+    color: var(--secondary-color);
+}
+
+/* Destinations Grid */
+/* Base Destination Styles */
+.destinations-grid {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Past Era Destinations (Renaissance Florence, Viking Age, Ancient Egypt, Arab Golden Age) */
+.destination-card[data-era="past"] {
+    background: linear-gradient(to bottom, #fff, #f8f4e9);
+}
+
+.destination-card[data-era="past"] .era {
+    background: linear-gradient(135deg, #8B4513 0%, #654321 100%);
+    color: white;
+}
+
+.destination-card[data-era="past"] .card-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(76,61,43,0.2) 0%, rgba(76,61,43,0.4) 100%);
+    z-index: 1;
+}
+
+/* Renaissance Florence Specific */
+.destination-card[data-destination="florence"] .era {
+    background: linear-gradient(135deg, #C19A6B 0%, #8B4513 100%);
+}
+
+/* Viking Age Specific */
+.destination-card[data-destination="viking"] .era {
+    background: linear-gradient(135deg, #4A5568 0%, #2D3748 100%);
+}
+
+/* Ancient Egypt Specific */
+.destination-card[data-destination="egypt"] .era {
+    background: linear-gradient(135deg, #D4AF37 0%, #C5A572 100%);
+}
+
+/* Arab Golden Age Specific */
+.destination-card[data-destination="arab"] .era {
+    background: linear-gradient(135deg, #B8860B 0%, #DAA520 100%);
+}
+
+/* Fantasy Era Destination (Atlantis) */
+.destination-card[data-era="fantasy"] {
+    background: linear-gradient(to bottom, #fff, #e6f7ff);
+}
+
+.destination-card[data-era="fantasy"] .era {
+    background: linear-gradient(135deg, #00B4D8 0%, #0077B6 100%);
+    color: white;
+}
+
+.destination-card[data-era="fantasy"] .card-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0,180,216,0.2) 0%, rgba(0,108,129,0.4) 100%);
+    z-index: 1;
+}
+
+/* Future Era Destination (Neo Tokyo) */
+.destination-card[data-era="future"] {
+    background: linear-gradient(to bottom, #fff, #f0f7ff);
+}
+
+.destination-card[data-era="future"] .era {
+    background: linear-gradient(135deg, #64FFDA 0%, #0A192F 100%);
+    color: white;
+}
+
+.destination-card[data-era="future"] .card-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(100,255,218,0.2) 0%, rgba(10,25,47,0.4) 100%);
+    z-index: 1;
+}
+
+/* Common Card Elements */
+.card-image {
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.era {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.card-content h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.card-content p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+/* Card Hover Effects */
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.destination-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.destination-card:hover .card-image::before {
+    opacity: 0.8;
+}
+
+/* Card Footer */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.learn-more {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.learn-more:hover {
+    color: var(--accent-color);
+}
+
+.book-now {
+    padding: 0.8rem 1.5rem;
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.book-now:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .destinations-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}

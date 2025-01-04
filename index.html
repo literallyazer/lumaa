@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luma | Luxury Time Travel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Luma</a>
+            <div class="nav-links">
+                <a href="html/destinations.html">Destinations</a>
+                <a href="html/quiz.html">Quiz</a>
+                <a href="html/about.html">About</a>
+                <a href="html/contact.html" >Contact</a>
+            </div>
+            <a href="html/book.html" class="book-btn">Book Journey</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Journey Through Time</h1>
+                <p>Experience history's greatest moments in unprecedented luxury</p>
+                <a href="/book" class="cta-button">Plan Your Journey</a>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image">
+                    <img src="images/hero.png" alt="Vintage clock mechanism" class="heroo">
+                </div>
+            </div>
+        </section>
+
+        <section class="featured">
+            <h2>Featured Destinations</h2>
+            <div class="destination-grid">
+                <article class="destination-card">
+                    <div class="card-image">
+                        <img src="images/arabia.jpg" alt="Arabic Golden Age">
+                    </div>
+                    <div class="card-content">
+                        <span class="era">1920s</span>
+                        <h3>The Arabic Golden Age</h3>
+                        <p>Step into the vibrant world of the Arabic Golden Age, a period of remarkable intellectual, scientific, and cultural advancements.</p>
+                        <a href="/destinations/arabic-golden-age" class="learn-more">Discover More</a>
+                    </div>
+                </article>
+
+                <article class="destination-card">
+                    <div class="card-image">
+                        <img src="images/florence.png" alt="Florence Renaissance">
+                    </div>
+                    <div class="card-content">
+                        <span class="era">1500s</span>
+                        <h3>Renaissance Florence</h3>
+                        <p>Witness the rebirth of art and culture in the cradle of the Renaissance.</p>
+                        <a href="/destinations/florence-renaissance" class="learn-more">Discover More</a>
+                    </div>
+                </article>
+
+                <article class="destination-card">
+                    <div class="card-image">
+                        <img src="images/tokyo.png" alt="Future Tokyo">
+                    </div>
+                    <div class="card-content">
+                        <span class="era">2150</span>
+                        <h3>Neo Tokyo</h3>
+                        <p>Step into tomorrow's technological wonder and experience the future firsthand.</p>
+                        <a href="/destinations/neo-tokyo" class="learn-more">Discover More</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="experience">
+            <div class="experience-content">
+                <h2>The Voyager Experience</h2>
+                <div class="experience-grid">
+                    <div class="experience-item">
+                        <span class="number">01</span>
+                        <h3>Luxury Accommodations</h3>
+                        <p>Period-authentic lodging with modern comforts</p>
+                    </div>
+                    <div class="experience-item">
+                        <span class="number">02</span>
+                        <h3>Expert Guides</h3>
+                        <p>Historians and cultural experts at your service</p>
+                    </div>
+                    <div class="experience-item">
+                        <span class="number">03</span>
+                        <h3>Seamless Travel</h3>
+                        <p>State-of-the-art temporal transportation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h4>LUMA</h4>
+                <p>Luxury time travel experiences since 2150</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h5>Explore</h5>
+                    <a href="/destinations">Destinations</a>
+                    <a href="/experiences">Experiences</a>
+                    <a href="/about">About Us</a>
+                    <a href="/contact">Contact</a>
+                </div>
+                <div class="link-column">
+                    <h5>Legal</h5>
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Service</a>
+                    <a href="/temporal">Temporal Guidelines</a>
+                </div>
+                <div class="link-column">
+                    <h5>Contact</h5>
+                    <p>temporal@luma.com</p>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Luma. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="theme-toggle">
+        <button class="theme-btn modern" data-theme="modern" title="Modern Theme">
+            <i class="fas fa-sun"></i>
+        </button>
+        <button class="theme-btn medieval" data-theme="medieval" title="Medieval Theme">
+            <i class="fas fa-crown"></i>
+        </button>
+        <button class="theme-btn future" data-theme="future" title="Future Theme">
+            <i class="fas fa-rocket"></i>
+        </button>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

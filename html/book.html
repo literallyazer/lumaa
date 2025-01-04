@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Journey | Luma Time Travel</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/book.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Luma</a>
+            <div class="nav-links">
+                <a href="destinations.html">Destinations</a>
+                <a href="quiz.html">Quiz</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="booking-container">
+            <!-- Left Side - Form -->
+            <div class="booking-form">
+                <h1>Book Your Temporal Journey</h1>
+                <p class="form-intro">Prepare for an extraordinary adventure through time</p>
+
+                <form id="bookingForm">
+                    <!-- Destination Selection -->
+                    <div class="form-group">
+                        <label>Choose Your Destination</label>
+                        <select name="destination" required>
+                            <option value="">Select a destination...</option>
+                            <optgroup label="Historical Era">
+                                <option value="ancient-egypt">Ancient Egypt - 2500 BC</option>
+                                <option value="renaissance">Renaissance Florence - 1500</option>
+                                <option value="golden-age">Islamic Golden Age - 800</option>
+                            </optgroup>
+                            <optgroup label="Future">
+                                <option value="neo-tokyo">Neo Tokyo - 2150</option>
+                                <option value="mars-colony">Mars Colony - 2180</option>
+                            </optgroup>
+                            <optgroup label="Fantasy">
+                                <option value="atlantis">Lost City of Atlantis</option>
+                                <option value="eldorado">El Dorado</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <!-- Temporal Options -->
+                    <div class="form-group">
+                        <label>Temporal Preferences</label>
+                        <div class="temporal-options">
+                            <div class="temporal-option">
+                                <input type="radio" name="temporal" id="fixed" value="fixed" required>
+                                <label for="fixed">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Fixed Point</span>
+                                    <small>Experience a specific moment in time</small>
+                                </label>
+                            </div>
+                            <div class="temporal-option">
+                                <input type="radio" name="temporal" id="fluid" value="fluid">
+                                <label for="fluid">
+                                    <i class="fas fa-wave-square"></i>
+                                    <span>Fluid Timeline</span>
+                                    <small>Experience events across multiple days</small>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Date Selection -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Departure Date (Present Time)</label>
+                            <input type="date" name="departure" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Duration (Days)</label>
+                            <input type="number" name="duration" min="1" max="14" value="1" required>
+                        </div>
+                    </div>
+
+                    <!-- Travelers -->
+                    <div class="form-group">
+                        <label>Number of Travelers</label>
+                        <div class="traveler-counter">
+                            <button type="button" class="counter-btn minus">-</button>
+                            <input type="number" name="travelers" value="1" min="1" max="6" readonly>
+                            <button type="button" class="counter-btn plus">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Experience Level -->
+                    <div class="form-group">
+                        <label>Time Travel Experience Level</label>
+                        <div class="experience-slider">
+                            <input type="range" name="experience" min="1" max="3" value="1">
+                            <div class="slider-labels">
+                                <span>Novice</span>
+                                <span>Intermediate</span>
+                                <span>Expert</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Preferences -->
+                    <div class="form-group">
+                        <label>Journey Preferences</label>
+                        <div class="preferences-grid">
+                            <div class="preference-option">
+                                <input type="checkbox" id="luxury" name="preferences[]" value="luxury">
+                                <label for="luxury">
+                                    <i class="fas fa-gem"></i>
+                                    Luxury Accommodations
+                                </label>
+                            </div>
+                            <div class="preference-option">
+                                <input type="checkbox" id="guide" name="preferences[]" value="guide">
+                                <label for="guide">
+                                    <i class="fas fa-user-tie"></i>
+                                    Personal Time Guide
+                                </label>
+                            </div>
+                            <div class="preference-option">
+                                <input type="checkbox" id="language" name="preferences[]" value="language">
+                                <label for="language">
+                                    <i class="fas fa-language"></i>
+                                    Language Integration
+                                </label>
+                            </div>
+                            <div class="preference-option">
+                                <input type="checkbox" id="photo" name="preferences[]" value="photo">
+                                <label for="photo">
+                                    <i class="fas fa-camera-retro"></i>
+                                    Temporal Photography
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Special Requests -->
+                    <div class="form-group">
+                        <label>Special Requests</label>
+                        <textarea name="special-requests" rows="3" placeholder="Any specific requirements or questions?"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn">
+                        <span>Secure Your Journey</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right Side - Journey Features -->
+            <div class="booking-features">
+                <div class="feature-card safety">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Temporal Safety</h3>
+                    <p>Advanced paradox prevention systems and timeline protection protocols ensure your safety across all temporal planes.</p>
+                </div>
+
+                <div class="feature-card comfort">
+                    <i class="fas fa-concierge-bell"></i>
+                    <h3>Luxury Experience</h3>
+                    <p>Experience the finest accommodations and amenities, carefully curated for each temporal destination.</p>
+                </div>
+
+                <div class="feature-card guide">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>Expert Guidance</h3>
+                    <p>Travel with certified temporal historians who bring each era to life with their extensive knowledge.</p>
+                </div>
+
+                <div class="feature-card guarantee">
+                    <i class="fas fa-clock-rotate-left"></i>
+                    <h3>Return Guarantee</h3>
+                    <p>Our advanced temporal anchoring technology ensures your safe return to the present time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h4>LUMA</h4>
+                <p>Luxury time travel experiences since 2150</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h5>Explore</h5>
+                    <a href="destinations.html">Destinations</a>
+                    <a href="quiz.html">Quiz</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="link-column">
+                    <h5>Legal</h5>
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Service</a>
+                    <a href="/temporal">Temporal Guidelines</a>
+                </div>
+                <div class="link-column">
+                    <h5>Contact</h5>
+                    <p>temporal@luma.com</p>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Luma. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/book.js"></script>
+</body>
+</html>

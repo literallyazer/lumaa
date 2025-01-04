@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Luma</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../" class="logo">Luma</a>
+            <div class="nav-links">
+                <a href="../html/destinations.html">Destinations</a>
+                <a href="../html/quiz.html">Quiz</a>
+                <a href="../html/about.html">About</a>
+                <a href="../html/contact.html" class="active">Contact</a>
+            </div>
+            <a href="../html/book.html" class="book-btn">Book Journey</a>
+        </div>
+    </nav>
+
+    <main class="contact-page">
+        <section class="contact-hero">
+            <h1>Get in Touch</h1>
+            <p>Have questions about your temporal journey? We're here to help.</p>
+        </section>
+
+        <section class="contact-content">
+            <div class="contact-info">
+                <div class="info-item">
+                    <h3>Visit Our Office</h3>
+                    <p>123 Temporal Avenue<br>New York, NY 10001</p>
+                </div>
+                <div class="info-item">
+                    <h3>Contact Details</h3>
+                    <p>Email: temporal@luma.com<br>Phone: +1 (555) 123-4567</p>
+                </div>
+                <div class="info-item">
+                    <h3>Office Hours</h3>
+                    <p>Monday - Friday: 9AM - 6PM<br>Saturday: 10AM - 4PM</p>
+                </div>
+            </div>
+
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="booking">Booking Inquiry</option>
+                        <option value="support">Technical Support</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span class="error-message" id="subjectError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h4>LUMA</h4>
+                <p>Luxury time travel experiences since 2150</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h5>Explore</h5>
+                    <a href="/destinations">Destinations</a>
+                    <a href="/experiences">Experiences</a>
+                    <a href="/about">About Us</a>
+                    <a href="/contact">Contact</a>
+                </div>
+                <div class="link-column">
+                    <h5>Legal</h5>
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Service</a>
+                    <a href="/temporal">Temporal Guidelines</a>
+                </div>
+                <div class="link-column">
+                    <h5>Contact</h5>
+                    <p>temporal@luma.com</p>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Luma. All rights reserved.</p>
+        </div>    </footer>
+
+    <script src="../js/contact.js"></script>
+</body>
+</html>
